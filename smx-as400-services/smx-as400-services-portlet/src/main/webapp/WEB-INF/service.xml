@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="ec.com.smx.portal.rrhh.services"
+	auto-namespace-tables="false">
+	<author>maballe</author>
+	<namespace>smx</namespace>
+	<entity name="Usuario" local-service="true" remote-service="true"
+		table="usuario" data-source="anotherDataSource" session-factory="anotherSessionFactory"
+		tx-manager="anotherTransactionManager">
+		<column db-name="usuarioid" name="usuarioId" primary="true"
+			type="long"></column>
+		<column name="nombre" type="String" db-name="nombre"> </column>
+		<column name="roleId" type="long" db-name="roleid"> </column>
+		<finder name="NombreKeyWord" return-type="Collection">
+			<finder-column name="nombre" case-sensitive="true"
+				comparator="LIKE"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Rol" local-service="true" remote-service="true"
+		table="rolid" data-source="anotherDataSource" session-factory="anotherSessionFactory"
+		tx-manager="anotherTransactionManager">
+		<column db-name="rolid" name="rolId" primary="true" type="long"></column>
+		<column name="nombre" type="String" db-name="nombre"> </column>
+	</entity>
+	<entity name="UsuarioRol" local-service="true" remote-service="true"
+		table="usuario_rol" data-source="anotherDataSource" session-factory="anotherSessionFactory"
+		tx-manager="anotherTransactionManager">
+		<column db-name="usuariorolid" name="UsuarioRolId" primary="true"
+			type="long"></column>
+		<column db-name="usuarioid" name="usuarioId" type="long"></column>
+		<column db-name="rolid" name="rolId" type="long"></column>
+		<finder name="UsuarioId" return-type="Collection">
+			<finder-column name="usuarioId" />
+		</finder>
+		<finder name="RolId" return-type="Collection">
+			<finder-column name="rolId" />
+		</finder>
+	</entity>
+
+</service-builder>

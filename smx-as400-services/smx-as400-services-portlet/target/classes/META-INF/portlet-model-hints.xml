@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ec.com.smx.portal.rrhh.services.model.Rol">
+		<field name="rolId" type="long" />
+		<field name="nombre" type="String" />
+	</model>
+	<model name="ec.com.smx.portal.rrhh.services.model.Usuario">
+		<field name="usuarioId" type="long" />
+		<field name="nombre" type="String" />
+		<field name="roleId" type="long" />
+	</model>
+	<model name="ec.com.smx.portal.rrhh.services.model.UsuarioRol">
+		<field name="UsuarioRolId" type="long" />
+		<field name="usuarioId" type="long" />
+		<field name="rolId" type="long" />
+	</model>
+</model-hints>

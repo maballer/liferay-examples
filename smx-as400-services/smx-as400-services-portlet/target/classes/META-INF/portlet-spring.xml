@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="ec.com.smx.portal.rrhh.services.service.RolLocalService" class="ec.com.smx.portal.rrhh.services.service.impl.RolLocalServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.RolService" class="ec.com.smx.portal.rrhh.services.service.impl.RolServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.persistence.RolPersistence" class="ec.com.smx.portal.rrhh.services.service.persistence.RolPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="anotherDataSource" />
+		<property name="sessionFactory" ref="anotherSessionFactory" />
+	</bean>
+	<bean id="ec.com.smx.portal.rrhh.services.service.UsuarioLocalService" class="ec.com.smx.portal.rrhh.services.service.impl.UsuarioLocalServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.UsuarioService" class="ec.com.smx.portal.rrhh.services.service.impl.UsuarioServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.persistence.UsuarioPersistence" class="ec.com.smx.portal.rrhh.services.service.persistence.UsuarioPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="anotherDataSource" />
+		<property name="sessionFactory" ref="anotherSessionFactory" />
+	</bean>
+	<bean id="ec.com.smx.portal.rrhh.services.service.UsuarioRolLocalService" class="ec.com.smx.portal.rrhh.services.service.impl.UsuarioRolLocalServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.UsuarioRolService" class="ec.com.smx.portal.rrhh.services.service.impl.UsuarioRolServiceImpl" />
+	<bean id="ec.com.smx.portal.rrhh.services.service.persistence.UsuarioRolPersistence" class="ec.com.smx.portal.rrhh.services.service.persistence.UsuarioRolPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="anotherDataSource" />
+		<property name="sessionFactory" ref="anotherSessionFactory" />
+	</bean>
+</beans>
