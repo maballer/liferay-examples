@@ -82,11 +82,5 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>ec.com.kruger</groupId> -->
-<!-- 			<artifactId>fwk-utilitario-dao</artifactId> -->
-<!-- 			<version>1.6.3-SNAPSHOT</version> -->
-<!-- 		</dependency> -->
-			
 	</dependencies>
 </project>
